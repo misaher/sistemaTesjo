@@ -10,6 +10,7 @@ import UsuarioProvider from '../src/context/usuario/UsuarioProvider';
  ///Componenetes
   import Login  from  '../src/components/auth/Login';
   import Registro  from   '../src/components/auth/Registro';
+  import  Principal  from '../src/components/main/Principal';
     
 function App() {
 
@@ -21,17 +22,20 @@ function App() {
      <PreguntasProvider>
       
                      <Router>
-              <Switch>
-              <Route exact path="/">
-              {pantalla ?
-                    <Registro
+               <Switch>
+               <Route exact path="/">  
+               <Principal/>
+               </Route>
+               <Route path="/registro">
+               <Registro
                     setPantalla ={setPantalla}
-                    />                    
-                       :
+                    /> 
+                </Route>                 
+                 <Route path="/login">   
                        <Login 
                        setPantalla ={setPantalla}
-                     /> }
-               </Route>
+                     /> 
+                 </Route> 
                  
               </Switch> 
           </Router>

@@ -1,5 +1,6 @@
   import React from 'react';
   import tec  from '../../imagenes/tec.jpg';
+  import {Link} from 'react-router-dom';
     const Login = ({setPantalla}) => {
         
       const acion= (dato)=>{
@@ -30,7 +31,7 @@
         </div>
         <div className="d-grid gap-2">
         <button className="btn btn-primary" onClick={()=> acion("Dato")} type="button"  >Iniciar  Sessión</button>
-        <button className="btn btn-danger" onClick={()=> setPantalla(true)} type="button"  >Registro :)</button>
+        <button className="btn btn-danger"  type="button"><Link to="/">Regresar</Link></button>
       </div> 
 
 

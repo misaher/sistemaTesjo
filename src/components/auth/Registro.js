@@ -1,5 +1,6 @@
 import React from 'react';
 import tec  from '../../imagenes/tec.jpg';
+import {Link} from 'react-router-dom';
     const Registro = ({setPantalla}) => {
         
       const acion= (dato)=>{
@@ -35,7 +36,7 @@ import tec  from '../../imagenes/tec.jpg';
           <input type="text" className="form-control" id="nombre" placeholder="JUAN"/>
         </div>
         <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">CURP</label>
+          <div><label for="exampleInputPassword1" className="form-label">CURP </label> <a href="#">puedes consultar tu curp aqui</a></div>
           <input type="text" className="form-control" id="nombre" placeholder="JFSHDFGFDJYRED"/>
         </div>
           
@@ -44,8 +45,8 @@ import tec  from '../../imagenes/tec.jpg';
           <input type="password" className="form-control" id="exampleInputPassword1" placeholder="********"/>
         </div>
         <div className="d-grid gap-2">
-        <button className="btn btn-primary" onClick={()=> acion("Dato")} type="button"  >Regsitrarse</button>
-        <button className="btn btn-primary" onClick={()=> setPantalla(false)} type="button"  >Regresar</button>
+        <button className="btn btn-primary" onClick={()=> acion("Dato")} type="button"  >Registrarse</button>
+          <div  className="tcentro"><Link to="/" className="btnU">Regresar</Link> </div> 
       </div> 
 
 
