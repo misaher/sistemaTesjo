@@ -11,6 +11,10 @@ body {
   margin-top: 20px;
      text-align: center;
 }
+.nombreUsu{
+    margin-left:5%;
+    padding-top: 1%;
+}
 
 .logotec{
          width: 100px;
@@ -26,7 +30,13 @@ code {
     width: 80%;
     height: 100%;
 }
-
+.contenedorG{
+    display: flex;
+    margin: 1%;
+     flex-direction: column;
+        align-items: center;
+           
+}
 .colorMenu{
      background-color: #291849;
      color: #fff;
@@ -42,7 +52,7 @@ code {
 .login{
   display: flex;
  
-   height: 650px ;
+ 
   flex-direction: column;
  align-items: center;
   justify-content: center;
@@ -53,9 +63,10 @@ code {
 
 .loginEle{
     width: 700px;
-    border: 1px solid #291849;
+    border: 2px solid #0A100D;
     border-radius: 30px;
     padding: 80px;
+    
   
 }
 
@@ -70,6 +81,28 @@ code {
    flex-direction: column;
       align-items: center;
      width: 80%;      
+}
+.botmenu{
+     margin-top: 7%;
+     text-align: center;
+}
+.bmenu{
+     display: block;
+      margin-bottom: 10%;
+}
+.bmenu2{
+     display: flex;
+     align-items: center;
+}
+.linkMen{
+  color: #fff;
+   text-decoration: none;
+   display: block;
+   width: 100%;
+   height: 100%;
+}
+.linkMen:hover{
+      color: #fff;
 }
 .tutuP{
    margin-top: 2%;
@@ -86,6 +119,9 @@ code {
       width: 600px;
       height: 400;
 }
+.textAv{
+   font-size: 20px;
+}
 
 .redes{
   display: flex;
@@ -97,14 +133,44 @@ code {
 .redesH{
       margin-left:10px;
   }
-  
-  .tcentro{
-     width: 50%;  
-  }
 
-  .btnU{
-       text-decoration: none;
-       color: #fff;
-       background-color: cornflowerblue;
-       width: 30%;
-  }
+.asideM{
+    text-decoration: none;
+    list-style:none ;
+    color: #fff;
+    margin-left: -40px;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 17px;
+}
+.AsideUs{
+  box-sizing: content-box;
+     width: 20%;
+     background-color:  #003049;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     margin:auto;
+     text-align: center;
+}
+.opli{
+  width: 100%; 
+  margin-bottom: 10px;
+  height: 30px;
+}
+.opli:hover{
+   background-color: #fcbf49;
+}
+.opUser{
+     text-decoration: none;
+     color: #fff;
+     width: 100%;
+}
+.opUser:hover{
+  color: #fff;
+}
+ 
+.botonesForm{
+    display: flex;
+    justify-content: space-between;
+}
