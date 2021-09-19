@@ -1,6 +1,56 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import  {useState} from 'react';
+import Entidades from './Entidades';
 const DatosGenerales = () =>{
-   
+    const estados =[
+        { "clave": "AGS", "nombre": "AGUASCALIENTES" },
+        { "clave": "BC",  "nombre": "BAJA CALIFORNIA" },
+        { "clave": "BCS", "nombre": "BAJA CALIFORNIA SUR" },
+        { "clave": "CHI", "nombre": "CHIHUAHUA" },
+        { "clave": "CHS", "nombre": "CHIAPAS" },
+        { "clave": "CMP", "nombre": "CAMPECHE" },
+        { "clave": "CMX", "nombre": "CIUDAD DE MEXICO" },
+        { "clave": "COA", "nombre": "COAHUILA" },
+        { "clave": "COL", "nombre": "COLIMA" },
+        { "clave": "DGO", "nombre": "DURANGO" },
+        { "clave": "GRO", "nombre": "GUERRERO" },
+        { "clave": "GTO", "nombre": "GUANAJUATO" },
+        { "clave": "HGO", "nombre": "HIDALGO" },
+        { "clave": "JAL", "nombre": "JALISCO" },
+        { "clave": "MCH", "nombre": "MICHOACAN" },
+        { "clave": "MEX", "nombre": "ESTADO DE MEXICO" },
+        { "clave": "MOR", "nombre": "MORELOS" },
+        { "clave": "NAY", "nombre": "NAYARIT" },
+        { "clave": "NL",  "nombre": "NUEVO LEON" },
+        { "clave": "OAX", "nombre": "OAXACA" },
+        { "clave": "PUE", "nombre": "PUEBLA" },
+        { "clave": "QR",  "nombre": "QUINTANA ROO" },
+        { "clave": "QRO", "nombre": "QUERETARO" },
+        { "clave": "SIN", "nombre": "SINALOA" },
+        { "clave": "SLP", "nombre": "SAN LUIS POTOSI" },
+        { "clave": "SON", "nombre": "SONORA" },
+        { "clave": "TAB", "nombre": "TABASCO" },
+        { "clave": "TLX", "nombre": "TLAXCALA" },
+        { "clave": "TMS", "nombre": "TAMAULIPAS" },
+        { "clave": "VER", "nombre": "VERACRUZ" },
+        { "clave": "YUC", "nombre": "YUCATAN" },
+        { "clave": "ZAC", "nombre": "ZACATECAS" } 
+    ];
+         const [datosGen,setDatos] = useState({
+                   domicilio: '',
+                   numeroe: '',
+                   numeroi: '',
+                   colonia: '',
+                   codigoP: '',
+                   entidad: '',
+                 telefonoM: '',
+               nombreTutor: '',
+                  telefono: '',
+                 infoIncap: '',
+                  lenguaIn: '',
+
+
+         })
             const guardarDatos=(e)=>{
                 e.preventDefault();
                 console.log("Ok Save");
@@ -11,6 +61,14 @@ const DatosGenerales = () =>{
                   )
 
         }
+
+        const guardarGen = (datos) =>{
+                    setDatos({
+                        ...datosGen,
+                        [datos.name]: datos.value
+                    })
+        }
+          
         const  siguiente =()=>{
             console.log('Ok siguiente');
             Swal.fire({
@@ -68,7 +126,14 @@ const DatosGenerales = () =>{
                <div className="mb-3 col-6">
                 <label for="disabledSelect" className="form-label">Entidad/Estado de domicilio APIS</label>
                 <select id="otra" className="form-select">
-                    <option>Localidad</option>
+                <option value="sin datos">Selecione la localidad</option>
+                     {  estados.map(element =>(
+                          <Entidades
+                                 element= {element} 
+                          />
+                     )) 
+                     }
+                    
                     </select>
                     </div>
                     <div className="mb-3 col-6">
