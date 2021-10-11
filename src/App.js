@@ -22,16 +22,22 @@ import UsuarioProvider from '../src/context/usuario/UsuarioProvider';
     import DatosCarrera from './components/preregistro/DatosCarrera';
     import DastosProcedencia from './components/preregistro/DastosProcedencia';
     import DatosGenerales  from './components/preregistro/DatosGenerales';
+    ///para usuario 
+    import Perfil   from './components/usuario/menuUsuario/Perfil';
+    import Documentacion from './components/usuario/menuUsuario/Documentacion';
+    import CargaDinamica  from './components/usuario/menuUsuario/CargaDinamica';
 function App() {
 
-  const  [pantalla,setPantalla] = useState(false)
+  const  [pantalla,setPantalla] = useState(true)
       console.log("Variable--->",pantalla);
 
   return (
      <Fragment>   
      <PreguntasProvider>
-      
+         
+       
                      <Router>
+                   { pantalla? <MainUsuario/>: null }
                <Switch>
                <Route exact path="/">  
                <Principal/>
@@ -73,7 +79,17 @@ function App() {
                    </Route>
                    <Route path="/datosGenerales">
                        <DatosGenerales/>
-                   </Route>                 
+                   </Route> 
+                   <Route path="/perfil">
+                       <Perfil/>
+                   </Route> 
+                   <Route path="/documentacion">
+                       <Documentacion/>
+                   </Route>
+                   <Route path="/cargadinamica/:tipo">
+                      <CargaDinamica/>
+                   </Route>
+                                  
               </Switch> 
           </Router>
     </PreguntasProvider>

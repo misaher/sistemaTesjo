@@ -196,3 +196,53 @@ code {
   text-align: center;
   font-weight: bold;
 }
+
+.forflex{
+     display: flex;
+     
+}
+.icons{
+  margin-top: 5px;
+  margin-right: -16px;
+  position: relative;
+  left: 13px;
+}
+.inp{
+    width: 100%;   
+    
+}
+
+
+.avatar{
+     width: 45px;
+     height: 40px;
+     border-radius: 20px;
+     margin-bottom: 10px;
+  
+}
+
+
+
+.documenta{
+    margin-top: 10%;
+   display: flex;
+}
+
+.estadouno{
+    margin-left: 10px;
+    width: 140px;
+    height: 200px;
+    background-color: #cbedc0;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+   
+}
+
+.divbtn{
+    margin-top: 10px;
+}
+

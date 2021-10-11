@@ -4,7 +4,7 @@ import LogoTc  from '../../imagenes/LogoTc.jpg'
 import Registro from '../auth/Registro';
 import Login  from  '../auth/Login'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee} from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faUser} from '@fortawesome/free-solid-svg-icons'
 import { faTwitter,faFacebook } from '@fortawesome/free-brands-svg-icons'
 const Principal = () => {
   const [datos,setDatos] = useState(0)

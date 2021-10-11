@@ -1,6 +1,8 @@
   import React from 'react';
   import tec  from '../../imagenes/tec.jpg';
   import {Link} from 'react-router-dom';
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  import { faCoffee, faUser,faEnvelope,faUnlock} from '@fortawesome/free-solid-svg-icons'
     const Login = ({setPantalla}) => {
         
       const acion= (dato)=>{
@@ -22,12 +24,11 @@
             <div className="mb-6">
               
           <label for="exampleInputEmail1" className="form-label">Email address </label>
-          <input type="email" className="form-control" id="exampleInputEmail1" placeholder="correo @" aria-describedby="emailHelp"/>
-         
+           <div className="forflex"><span className="icons"><FontAwesomeIcon icon={faEnvelope}/></span><input type="email"  className="form-control inp" id="exampleInputEmail1" placeholder="     Correo @" aria-describedby="emailHelp"/> </div> 
         </div>
         <div className="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********"/>
+          <div className="forflex"><span className="icons"><FontAwesomeIcon icon={faUnlock}/></span><input type="password" class="form-control  inp" id="exampleInputPassword1" placeholder="      ********"/> </div>
         </div>
         <div className="d-grid gap-2">
         <button className="btn btn-primary" onClick={()=> acion("Dato")} type="button"  >Iniciar  Sessión</button>
